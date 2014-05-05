@@ -1,0 +1,157 @@
+<head>
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+<script src="js/jquery-2.1.0.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/eztab.js"></script>
+</style>
+<h1><br></h1>
+</head>
+
+<body>
+
+<div class="container">
+	<div class="jumbotron">
+	 	<h2><center>eztab</center></h2>
+		<center><div class="btn-group btn-group-justified" data-toggle="buttons">
+		<label class="btn btn-success btn-block active">
+			<input type="radio" name="instrument" value="guitar" id="guitar" checked> Guitar
+		</label>
+		<label class="btn btn-info btn-block">
+			<input type="radio" name="instrument" value="bass" id="bass"> Bass
+		</label>
+		<script>
+		changeInstrument();
+		</script>
+		</div></center>
+	<p><div class="span6">
+		<textarea class="form-control" rows="7"  id="guitartab">E-&#13;&#10;B-&#13;&#10;G-&#13;&#10;D-&#13;&#10;A-&#13;&#10;E-&#13;&#10;</textarea></div></p>
+	<p><div class="span6">
+		<textarea class="form-control" rows="5"  id="basstab">G-&#13;&#10;D-&#13;&#10;A-&#13;&#10;E-&#13;&#10;</textarea></div></p>
+	<p>
+			<script>
+				$(document).ready(function(){	// if a fret is clicked, update the tab
+					$(".fret").click(function() {
+						var id = this.id;
+						var tab = writeNewNote(id);
+						$("textarea#guitartab").val(tab);
+					});
+				});
+
+				$(document).ready(function(){	// if a fret is clicked, update the tab
+					$(".fretbass").click(function() {
+						var id = this.id;
+						var tab = writeNewNoteBass(id);
+						$("textarea#basstab").val(tab);
+					});
+				});
+			</script>
+		<a class="btn btn-warning btn-lg" id = "new">New</a>
+		<a class="btn btn-warning btn-lg" id = "select">Select all</a>
+		<script>
+			$(document).ready(function() {
+				$("#new").click(function() {
+					var answer = confirm("Are you sure? This will delete all unsaved work.");
+					if (answer)
+					{
+						$("textarea#guitartab").val("");
+						$("textarea#basstab").val("");
+						clearTab();
+					}
+				});
+				$('#select').click(function() {
+					$('#guitartab').select();
+					$('#basstab').select();
+				});
+			});
+		</script>
+	</p>
+	<p><div class = "jumbotron" id="fretboardguitar">
+		<div class = "btn-toolbar centered" id="string1">
+			<div class="btn-group">
+				<div class="btn-group">
+					<button type="button" class="btn btn-default disabled">E</button>
+				</div>
+				<script>createFrets(0, "guitar"); </script>
+			</div>
+		</div>
+
+		<div class = "btn-toolbar centered " id="string2">
+			<div class="btn-group">
+				<div class="btn-group">
+					<button type="button" class="btn btn-default disabled">B</button>
+				</div>
+				<script>createFrets(1, "guitar"); </script>
+			</div>
+		</div>
+		<div class = "btn-toolbar centered" id="string3">
+			<div class="btn-group">
+				<div class="btn-group">
+					<button type="button" class="btn btn-default disabled">G</button>
+				</div>
+				<script>createFrets(2, "guitar"); </script>
+			</div>
+		</div>
+		<div class = "btn-toolbar centered" id="string4">
+			<div class="btn-group">
+				<div class="btn-group">
+					<button type="button" class="btn btn-default disabled">D</button>
+				</div>
+				<script>createFrets(3, "guitar"); </script>
+			</div>
+		</div>
+		<div class = "btn-toolbar centered" id="string5">
+			<div class="btn-group">
+				<div class="btn-group">
+					<button type="button" class="btn btn-default disabled">A</button>
+				</div>
+				<script>createFrets(4, "guitar"); </script>
+			</div>
+		</div>
+		<div class = "btn-toolbar centered" id="string6">
+			<div class="btn-group">
+				<div class="btn-group">
+					<button type="button" class="btn btn-default disabled">E</button>
+				</div>
+				<script>createFrets(5, "guitar"); </script>
+			</div>
+		</div>
+	</div></p>
+	<p><div class = "jumbotron" id="fretboardbass">
+		<div class = "btn-toolbar centered" id="string3">
+			<div class="btn-group">
+				<div class="btn-group">
+					<button type="button" class="btn btn-default disabled">G</button>
+				</div>
+				<script>createFrets(0, "bass"); </script>
+			</div>
+		</div>
+		<div class = "btn-toolbar centered" id="string4">
+			<div class="btn-group">
+				<div class="btn-group">
+					<button type="button" class="btn btn-default disabled">D</button>
+				</div>
+				<script>createFrets(1, "bass"); </script>
+			</div>
+		</div>
+		<div class = "btn-toolbar centered" id="string5">
+			<div class="btn-group">
+				<div class="btn-group">
+					<button type="button" class="btn btn-default disabled">A</button>
+				</div>
+				<script>createFrets(2, "bass"); </script>
+			</div>
+		</div>
+		<div class = "btn-toolbar centered" id="string6">
+			<div class="btn-group">
+				<div class="btn-group">
+					<button type="button" class="btn btn-default disabled">E</button>
+				</div>
+				<script>createFrets(3, "bass"); </script>
+			</div>
+		</div>
+	</div></p>
+	 
+	
+</div>
+
+</body>
