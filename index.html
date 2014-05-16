@@ -64,7 +64,348 @@
 				});
 			});
 		</script>
+		You can horizontally resize the box.
 	</p>
+
+	<button class ="btn btn-info" id="chordgtr" data-toggle="modal" data-target="#chordmodal">Chord</button>
+
+		<div class="modal" id="chordmodal">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+			<h4 class="modal-title">Chord Editor</h4>
+		      </div>
+
+		      <div class="modal-body">
+				       e <select class="form-control chord" id="stringchord0">
+						  <option value='-'>-</option>
+						  <option value='0'>0</option>
+						  <option value='1'>1</option>
+						  <option value='2'>2</option>
+						  <option value='3'>3</option>
+						  <option value='4'>4</option>
+						  <option value='5'>5</option>
+						  <option value='6'>6</option>
+						  <option value='7'>7</option>
+						  <option value='8'>8</option>
+						  <option value='9'>9</option>
+						  <option value='10'>10</option>
+						  <option value='11'>11</option>
+						  <option value='12'>12</option>
+						  <option value='13'>13</option>
+						  <option value='14'>14</option>
+						  <option value='15'>15</option>
+						  <option value='16'>16</option>
+						  <option value='17'>17</option>
+						  <option value='18'>18</option>
+						  <option value='19'>19</option>
+						  <option value='20'>20</option>
+						  <option value='21'>21</option>
+					</select>
+					<br>
+				       B <select class="form-control chord" id="stringchord1">
+						  <option value='-'>-</option>
+						  <option value='0'>0</option>
+						  <option value='1'>1</option>
+						  <option value='2'>2</option>
+						  <option value='3'>3</option>
+						  <option value='4'>4</option>
+						  <option value='5'>5</option>
+						  <option value='6'>6</option>
+						  <option value='7'>7</option>
+						  <option value='8'>8</option>
+						  <option value='9'>9</option>
+						  <option value='10'>10</option>
+						  <option value='11'>11</option>
+						  <option value='12'>12</option>
+						  <option value='13'>13</option>
+						  <option value='14'>14</option>
+						  <option value='15'>15</option>
+						  <option value='16'>16</option>
+						  <option value='17'>17</option>
+						  <option value='18'>18</option>
+						  <option value='19'>19</option>
+						  <option value='20'>20</option>
+						  <option value='21'>21</option>
+					</select>
+					<br>
+				       G <select class="form-control chord" id="stringchord2">
+						  <option value='-'>-</option>
+						  <option value='0'>0</option>
+						  <option value='1'>1</option>
+						  <option value='2'>2</option>
+						  <option value='3'>3</option>
+						  <option value='4'>4</option>
+						  <option value='5'>5</option>
+						  <option value='6'>6</option>
+						  <option value='7'>7</option>
+						  <option value='8'>8</option>
+						  <option value='9'>9</option>
+						  <option value='10'>10</option>
+						  <option value='11'>11</option>
+						  <option value='12'>12</option>
+						  <option value='13'>13</option>
+						  <option value='14'>14</option>
+						  <option value='15'>15</option>
+						  <option value='16'>16</option>
+						  <option value='17'>17</option>
+						  <option value='18'>18</option>
+						  <option value='19'>19</option>
+						  <option value='20'>20</option>
+						  <option value='21'>21</option>
+					</select>
+					<br>
+				       D <select class="form-control chord" id="stringchord3">
+						  <option value='-'>-</option>
+						  <option value='0'>0</option>
+						  <option value='1'>1</option>
+						  <option value='2'>2</option>
+						  <option value='3'>3</option>
+						  <option value='4'>4</option>
+						  <option value='5'>5</option>
+						  <option value='6'>6</option>
+						  <option value='7'>7</option>
+						  <option value='8'>8</option>
+						  <option value='9'>9</option>
+						  <option value='10'>10</option>
+						  <option value='11'>11</option>
+						  <option value='12'>12</option>
+						  <option value='13'>13</option>
+						  <option value='14'>14</option>
+						  <option value='15'>15</option>
+						  <option value='16'>16</option>
+						  <option value='17'>17</option>
+						  <option value='18'>18</option>
+						  <option value='19'>19</option>
+						  <option value='20'>20</option>
+						  <option value='21'>21</option>
+					</select>
+					<br>
+				       A <select class="form-control chord" id="stringchord4">
+						  <option value='-'>-</option>
+						  <option value='0'>0</option>
+						  <option value='1'>1</option>
+						  <option value='2'>2</option>
+						  <option value='3'>3</option>
+						  <option value='4'>4</option>
+						  <option value='5'>5</option>
+						  <option value='6'>6</option>
+						  <option value='7'>7</option>
+						  <option value='8'>8</option>
+						  <option value='9'>9</option>
+						  <option value='10'>10</option>
+						  <option value='11'>11</option>
+						  <option value='12'>12</option>
+						  <option value='13'>13</option>
+						  <option value='14'>14</option>
+						  <option value='15'>15</option>
+						  <option value='16'>16</option>
+						  <option value='17'>17</option>
+						  <option value='18'>18</option>
+						  <option value='19'>19</option>
+						  <option value='20'>20</option>
+						  <option value='21'>21</option>
+					</select>
+					<br>
+				       E <select class="form-control chord" id="stringchord5">
+						  <option value='-'>-</option>
+						  <option value='0'>0</option>
+						  <option value='1'>1</option>
+						  <option value='2'>2</option>
+						  <option value='3'>3</option>
+						  <option value='4'>4</option>
+						  <option value='5'>5</option>
+						  <option value='6'>6</option>
+						  <option value='7'>7</option>
+						  <option value='8'>8</option>
+						  <option value='9'>9</option>
+						  <option value='10'>10</option>
+						  <option value='11'>11</option>
+						  <option value='12'>12</option>
+						  <option value='13'>13</option>
+						  <option value='14'>14</option>
+						  <option value='15'>15</option>
+						  <option value='16'>16</option>
+						  <option value='17'>17</option>
+						  <option value='18'>18</option>
+						  <option value='19'>19</option>
+						  <option value='20'>20</option>
+						  <option value='21'>21</option>
+					</select>
+					<br>
+		      </div>
+
+		      <div class="modal-footer">
+			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			<button type="button" class="btn btn-primary" id="savegtrchord" data-dismiss="modal">Save changes</button>
+			<script>
+			$(document).ready(function(){	// write chord
+				$("#savegtrchord").click(function() {
+					var notes = [];
+					var string = "stringchord";
+					var string2 = "";
+					var note = "";
+					for (var i = 0; i < 6; i++) {
+						string2 = string;
+						string2 += i.toString();
+						note = $("#" + string2).find(":selected").text();
+						notes.push(note);
+					}
+					var tab = writeGtrChord(notes);
+					$("textarea#guitartab").val(tab);
+				});
+			});
+				
+			</script>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+	<button class ="btn btn-info" id="chordbass" data-toggle="modal" data-target="#chordmodalbass">Chord</button>
+
+		<div class="modal" id="chordmodalbass">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+			<h4 class="modal-title">Chord Editor</h4>
+		      </div>
+
+		      <div class="modal-body">
+				       G <select class="form-control chord" id="stringchordb0">
+						  <option value='-'>-</option>
+						  <option value='0'>0</option>
+						  <option value='1'>1</option>
+						  <option value='2'>2</option>
+						  <option value='3'>3</option>
+						  <option value='4'>4</option>
+						  <option value='5'>5</option>
+						  <option value='6'>6</option>
+						  <option value='7'>7</option>
+						  <option value='8'>8</option>
+						  <option value='9'>9</option>
+						  <option value='10'>10</option>
+						  <option value='11'>11</option>
+						  <option value='12'>12</option>
+						  <option value='13'>13</option>
+						  <option value='14'>14</option>
+						  <option value='15'>15</option>
+						  <option value='16'>16</option>
+						  <option value='17'>17</option>
+						  <option value='18'>18</option>
+						  <option value='19'>19</option>
+						  <option value='20'>20</option>
+						  <option value='21'>21</option>
+					</select>
+					<br>
+				       D <select class="form-control chord" id="stringchordb1">
+						  <option value='-'>-</option>
+						  <option value='0'>0</option>
+						  <option value='1'>1</option>
+						  <option value='2'>2</option>
+						  <option value='3'>3</option>
+						  <option value='4'>4</option>
+						  <option value='5'>5</option>
+						  <option value='6'>6</option>
+						  <option value='7'>7</option>
+						  <option value='8'>8</option>
+						  <option value='9'>9</option>
+						  <option value='10'>10</option>
+						  <option value='11'>11</option>
+						  <option value='12'>12</option>
+						  <option value='13'>13</option>
+						  <option value='14'>14</option>
+						  <option value='15'>15</option>
+						  <option value='16'>16</option>
+						  <option value='17'>17</option>
+						  <option value='18'>18</option>
+						  <option value='19'>19</option>
+						  <option value='20'>20</option>
+						  <option value='21'>21</option>
+					</select>
+					<br>
+				       A <select class="form-control chord" id="stringchordb2">
+						  <option value='-'>-</option>
+						  <option value='0'>0</option>
+						  <option value='1'>1</option>
+						  <option value='2'>2</option>
+						  <option value='3'>3</option>
+						  <option value='4'>4</option>
+						  <option value='5'>5</option>
+						  <option value='6'>6</option>
+						  <option value='7'>7</option>
+						  <option value='8'>8</option>
+						  <option value='9'>9</option>
+						  <option value='10'>10</option>
+						  <option value='11'>11</option>
+						  <option value='12'>12</option>
+						  <option value='13'>13</option>
+						  <option value='14'>14</option>
+						  <option value='15'>15</option>
+						  <option value='16'>16</option>
+						  <option value='17'>17</option>
+						  <option value='18'>18</option>
+						  <option value='19'>19</option>
+						  <option value='20'>20</option>
+						  <option value='21'>21</option>
+					</select>
+					<br>
+				       E <select class="form-control chord" id="stringchordb3">
+						  <option value='-'>-</option>
+						  <option value='0'>0</option>
+						  <option value='1'>1</option>
+						  <option value='2'>2</option>
+						  <option value='3'>3</option>
+						  <option value='4'>4</option>
+						  <option value='5'>5</option>
+						  <option value='6'>6</option>
+						  <option value='7'>7</option>
+						  <option value='8'>8</option>
+						  <option value='9'>9</option>
+						  <option value='10'>10</option>
+						  <option value='11'>11</option>
+						  <option value='12'>12</option>
+						  <option value='13'>13</option>
+						  <option value='14'>14</option>
+						  <option value='15'>15</option>
+						  <option value='16'>16</option>
+						  <option value='17'>17</option>
+						  <option value='18'>18</option>
+						  <option value='19'>19</option>
+						  <option value='20'>20</option>
+						  <option value='21'>21</option>
+					</select>
+					<br>
+		      </div>
+
+		      <div class="modal-footer">
+			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			<button type="button" class="btn btn-primary" id="savebasschord" data-dismiss="modal">Save changes</button>
+		      </div>
+		      <script>
+			$(document).ready(function(){	// write chord
+				$("#savebasschord").click(function() {
+					var notes = [];
+					var string = "stringchordb";
+					var string2 = "";
+					var note = "";
+					for (var i = 0; i < 6; i++) {
+						string2 = string;
+						string2 += i.toString();
+						note = $("#" + string2).find(":selected").text();
+						notes.push(note);
+					}
+					var tab = writeBassChord(notes);
+					$("textarea#basstab").val(tab);
+				});
+			});
+		      </script>
+		    </div>
+		  </div>
+		</div>
+
 	<p><div class = "jumbotron" id="fretboardguitar">
 		<div class = "btn-toolbar centered" id="string1">
 			<div class="btn-group">

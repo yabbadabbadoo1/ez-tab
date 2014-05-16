@@ -27,17 +27,22 @@ function changeInstrument() {
 	$(document).ready(function() { // change fretboard based on guitar or bass
 		$('#fretboardbass').hide();
 		$('#basstab').hide();
+		$('#chordbass').hide();
 		$('#guitar').change(function() { 
 			$('#fretboardguitar').show();
 			$('#guitartab').show();
+			$('#chordgtr').show();
 			$('#fretboardbass').hide();
 			$('#basstab').hide();
+			$('#chordbass').hide();
 		});
 		$('#bass').change(function() { 
 			$('#fretboardguitar').hide();
 			$('#guitartab').hide();
+			$('#chordgtr').hide()
 			$('#fretboardbass').show();
 			$('#basstab').show();
+			$('#chordbass').show();
 		});
 	});
 }
@@ -74,10 +79,6 @@ function clearTab()
 	
 }
 
-function outOfSpace()
-{
-	alert("You're out of space! Please save any work and make a new tab.");
-}
 
 function writeNewNote(note) {
 
@@ -132,10 +133,6 @@ function writeNewNote(note) {
 	for (var i = 0; i < 6; i++)
 	{
 		newtab += gtab[i];
-	}
-	if (124-gtab[0].length <= 2)
-	{
-		alert("Out of space, make a new one!");
 	}
 
 	return newtab;
@@ -195,10 +192,59 @@ function writeNewNoteBass(note) {
 	{
 		newtab += btab[i];
 	}
-	if (124-btab[0].length <= 2)
-	{
-		alert("Out of space, make a new one!");
+
+	return newtab;
+}
+
+function writeGtrChord(notes) {
+	for (var i = 0; i < 6; i++) {
+		gtab[i] = gtab[i].slice(0, -1);
+		if (notes[i] == '-') {
+			gtab[i] += '----';
+		}
+		else if (notes[i].length == 2) {
+			gtab[i] += notes[i];
+			gtab[i] += "--";
+		}
+		else {
+			gtab[i] += notes[i];
+			gtab[i] += "---";
+		}
+
+		gtab[i] += "\n";
+	}
+	var newtab = "";
+	
+	for (var i = 0; i < 6; i++) {
+		newtab += gtab[i];
 	}
 
 	return newtab;
 }
+	
+function writeBassChord(notes) {
+	for (var i = 0; i < 4; i++) {
+		btab[i] = btab[i].slice(0, -1);
+		if (notes[i] == '-') {
+			btab[i] += '----';
+		}
+		else if (notes[i].length == 2) {
+			btab[i] += notes[i];
+			btab[i] += "--";
+		}
+		else {
+			btab[i] += notes[i];
+			btab[i] += "---";
+		}
+
+		btab[i] += "\n";
+	}
+	var newtab = "";
+	
+	for (var i = 0; i < 4; i++) {
+		newtab += btab[i];
+	}
+
+	return newtab;
+}
+

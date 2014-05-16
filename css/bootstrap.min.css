@@ -282,7 +282,7 @@ input,
 button,
 select,
 textarea {
-  resize: none;
+  resize: horizontal;
   font-family: "Lucida Console", Monaco, monospace;
   font-size: inherit;
   line-height: inherit;
@@ -1727,6 +1727,11 @@ fieldset[disabled] .form-control {
   cursor: not-allowed;
   background-color: #999999;
   opacity: 1;
+}
+
+.form-control.chord
+{
+  width: 50%;
 }
 textarea.form-control {
   height: auto;
